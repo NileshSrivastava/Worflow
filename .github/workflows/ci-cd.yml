@@ -7,16 +7,19 @@ jobs:
       - name: Pulling code
         run: echo "Pulling code"
   build:
+    needs: code
     runs-on: ubuntu-latest
     steps:
       - name: Building code
         run: echo "Building code"
   test:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Testing code
         run: echo "Testing code"
   deploy:
+    needs: test
     runs-on: ubuntu-latest  
     steps:
       - name: Deploy
