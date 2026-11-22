@@ -13,7 +13,7 @@ jobs:
       - name: Building code
         run: echo "Building code"
   test:
-    needs: build
+    needs: code
     runs-on: ubuntu-latest
     steps:
       - name: Testing code
