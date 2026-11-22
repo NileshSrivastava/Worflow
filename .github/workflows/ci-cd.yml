@@ -1,0 +1,24 @@
+name: cicd
+on: workflow_dispatch
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pulling code
+        run: echo "Pulling code"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Building code
+        run: echo "Building code"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Testing code
+        run: echo "Testing code"
+  deploy:
+    runs-on: ubuntu-latest  
+    steps:
+      - name: Deploy
+        run: echo "Deploying code"
+        
